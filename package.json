@@ -1,0 +1,29 @@
+{
+  "name": "nivo-lightbox",
+  "version": "1.2.0",
+  "description": "A jQuery lightbox plugin",
+  "main": "nivo-lightbox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jerivas/Nivo-Lightbox.git"
+  },
+  "keywords": [
+    "ajax",
+    "gallery",
+    "iframe",
+    "image",
+    "jquery",
+    "lightbox",
+    "modal"
+    "plugin",
+  ],
+  "author": "Ed Rivas <e@jerivas.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jerivas/Nivo-Lightbox/issues"
+  },
+  "homepage": "https://github.com/jerivas/Nivo-Lightbox#readme"
+}
