@@ -1,0 +1,11 @@
+// Effects - FadeScale
+
+	.nivo-lightbox-effect-fadeScale {
+		.nivo-lightbox-wrap {
+			transition: transform 0.3s;
+			transform: scale(0.7);
+		}
+		&.nivo-lightbox-open .nivo-lightbox-wrap {
+			transform: scale(1);
+		}
+	}

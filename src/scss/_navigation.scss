@@ -1,0 +1,23 @@
+// Navigation
+
+	.nivo-lightbox-nav {
+		display: none;
+	}
+
+	.nivo-lightbox-prev {
+		position: absolute;
+		top: 50%;
+		left: 0;
+	}
+
+	.nivo-lightbox-next {
+		position: absolute;
+		top: 50%;
+		right: 0;
+	}
+
+	.nivo-lightbox-close {
+		position: absolute;
+		top: 2%;
+		right: 2%;
+	}

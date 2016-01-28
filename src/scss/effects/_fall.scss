@@ -1,0 +1,16 @@
+// Effects - Fall
+
+	.nivo-lightbox-body-effect-fall .nivo-lightbox-effect-fall {
+		perspective: 1000px;
+	}
+
+	.nivo-lightbox-effect-fall {
+		.nivo-lightbox-wrap {
+			transition: transform 0.3s ease-out;
+			transform: translateZ(300px);
+		}
+
+		&.nivo-lightbox-open .nivo-lightbox-wrap {
+			transform: translateZ(0);
+		}
+	}

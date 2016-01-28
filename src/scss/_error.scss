@@ -1,0 +1,15 @@
+// Error
+
+	.nivo-lightbox-error {
+		display: table;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		color: #fff;
+		text-shadow: 0 1px 1px #000;
+
+		p {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}

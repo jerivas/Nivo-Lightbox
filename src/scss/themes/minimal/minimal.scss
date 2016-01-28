@@ -1,0 +1,90 @@
+// Minimal theme with no image or font dependencies
+
+// Default values
+
+	$nvl-overlay-bg: rgba(#000, 0.9) !default;
+	$nvl-char-next: '\203A' !default; // Single right-pointing quote
+	$nvl-char-prev: '\2039' !default; // Single left-pointing quote
+	$nvl-char-close: '\2715' !default; // Multiplication sign
+	$nvl-nav-font-size: 90px !default;
+	$nvl-close-font-size: 30px !default;
+	$nvl-font-color: #fff !default;
+	$nvl-nav-transition-duration: 0.5s !default;
+
+
+.nivo-lightbox-theme-minimal {
+
+	// Overlay
+
+		&.nivo-lightbox-overlay {
+			background: $nvl-overlay-bg;
+		}
+
+	// Navigation
+
+		.nivo-lightbox-nav {
+			color: $nvl-font-color;
+			font-size: 0;
+			height: 100%;
+			max-width: 125px;
+			opacity: 0.5;
+			text-decoration: none !important;
+			top: 0;
+			transition: opacity $nvl-nav-transition-duration;
+			width: 15%;
+
+			&:before {
+				font-size: $nvl-nav-font-size;
+				left: 0;
+				position: absolute;
+				text-align: center;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.nivo-lightbox-prev {
+			background: linear-gradient(to left, transparent 0%, $nvl-overlay-bg 100%);
+
+			&:before {
+				content: $nvl-char-prev;
+			}
+		}
+
+		.nivo-lightbox-next {
+			background: linear-gradient(to right, transparent 0%, $nvl-overlay-bg 100%);
+
+			&:before {
+				content: $nvl-char-next;
+			}
+		}
+
+		.nivo-lightbox-close {
+			color: $nvl-font-color;
+			font-size: 0;
+			opacity: 0.5;
+			text-decoration: none !important;
+			transition: opacity $nvl-nav-transition-duration;
+
+			&:before {
+				content: $nvl-char-close;
+				font-size: $nvl-close-font-size;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+	// Title
+
+		.nivo-lightbox-title {
+			color: $nvl-font-color;
+			text-shadow: 1px 1px 1px invert($nvl-font-color);
+		}
+}

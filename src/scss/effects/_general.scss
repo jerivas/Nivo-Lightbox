@@ -1,0 +1,13 @@
+// Effects - General
+
+	.nivo-lightbox-notouch {
+		.nivo-lightbox-effect-fade,
+		.nivo-lightbox-effect-fadeScale,
+		.nivo-lightbox-effect-slideLeft,
+		.nivo-lightbox-effect-slideRight,
+		.nivo-lightbox-effect-slideUp,
+		.nivo-lightbox-effect-slideDown,
+		.nivo-lightbox-effect-fall {
+			transition: transform 0.2s ease-in-out;
+		}
+	}

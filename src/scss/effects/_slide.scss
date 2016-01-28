@@ -1,0 +1,38 @@
+// Effects - Slide
+
+	.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap,
+	.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap,
+	.nivo-lightbox-effect-slideUp .nivo-lightbox-wrap,
+	.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+		transition: transform 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	}
+
+	.nivo-lightbox-effect-slideLeft .nivo-lightbox-wrap {
+		transform: translateX(-10%);
+	}
+
+	.nivo-lightbox-effect-slideRight .nivo-lightbox-wrap {
+		transform: translateX(10%);
+	}
+
+	.nivo-lightbox-effect-slideLeft.nivo-lightbox-open .nivo-lightbox-wrap,
+	.nivo-lightbox-effect-slideRight.nivo-lightbox-open .nivo-lightbox-wrap {
+		transform: translateX(0);
+	}
+
+	.nivo-lightbox-effect-slideDown .nivo-lightbox-wrap {
+		transform: translateY(-10%);
+	}
+
+	.nivo-lightbox-effect-slideUp {
+		.nivo-lightbox-wrap {
+			transform: translateY(10%);
+		}
+		&.nivo-lightbox-open .nivo-lightbox-wrap {
+			transform: translateY(0);
+		}
+	}
+
+	.nivo-lightbox-effect-slideDown.nivo-lightbox-open .nivo-lightbox-wrap {
+		transform: translateY(0);
+	}
