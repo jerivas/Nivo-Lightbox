@@ -35,7 +35,7 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: 'dist',
-						src: ['**/*.css'],
+						src: ['**/*.css', '!**/*.min.css'],
 						dest: 'dist',
 						ext: '.css',
 					},
@@ -44,9 +44,6 @@ module.exports = function (grunt) {
 		},
 		uglify: {
 			dist: {
-				options: {
-					banner: '<%= banner %>',
-				},
 				files: [
 					{
 						expand: true,
@@ -71,6 +68,16 @@ module.exports = function (grunt) {
 				],
 			},
 		},
+		usebanner: {
+			dist: {
+				options: {
+					banner: '<%= banner %>',
+				},
+				files: {
+					src: ['dist/**/*.min.css', 'dist/**/*.min.js'],
+				},
+			},
+		},
 		watch: {
 			css: {
 				files: 'src/scss/**/*.scss',
@@ -88,9 +95,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-banner');
 
 	// Run all tasks and keep watching when invoking grunt without args
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
 	// Minification tasks
-	grunt.registerTask('build', ['uglify', 'cssmin']);
+	grunt.registerTask('build', ['uglify', 'cssmin', 'usebanner']);
 };
