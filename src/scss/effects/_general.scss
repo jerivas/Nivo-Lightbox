@@ -8,6 +8,8 @@
 		.nivo-lightbox-effect-slideUp,
 		.nivo-lightbox-effect-slideDown,
 		.nivo-lightbox-effect-fall {
-			transition: transform 0.2s ease-in-out;
+			transition-property: transform, opacity, visibility;
+			transition-duration: 0.2s;
+			transition-timing-function: ease-in-out;
 		}
 	}

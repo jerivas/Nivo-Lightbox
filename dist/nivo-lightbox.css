@@ -105,8 +105,12 @@
 .nivo-lightbox-notouch .nivo-lightbox-effect-slideUp,
 .nivo-lightbox-notouch .nivo-lightbox-effect-slideDown,
 .nivo-lightbox-notouch .nivo-lightbox-effect-fall {
-	-webkit-transition: -webkit-transform 0.2s ease-in-out;
-	        transition: transform 0.2s ease-in-out;
+	-webkit-transition-property: -webkit-transform, opacity, visibility;
+	        transition-property: transform, opacity, visibility;
+	-webkit-transition-duration: 0.2s;
+	        transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in-out;
+	        transition-timing-function: ease-in-out;
 }
 
 .nivo-lightbox-effect-fadeScale .nivo-lightbox-wrap {
