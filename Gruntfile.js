@@ -2,6 +2,15 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		banner: '/*\n'+
+			'* <%= pkg.screenName %> v<%= pkg.version %>\n' +
+			'* <%= pkg.description %>\n' +
+			'* <%= pkg.homepage %>\n' +
+			'*\n' +
+			'* Copyright <%= grunt.template.today("yyyy") %>, <%= pkg.author %>\n' +
+			'* Free to use and abuse under the MIT license.\n' +
+			'* http://www.opensource.org/licenses/mit-license.php\n' +
+			'*/\n',
 		sass: {
 			dist: {
 				options: {
@@ -35,6 +44,9 @@ module.exports = function (grunt) {
 		},
 		uglify: {
 			dist: {
+				options: {
+					banner: '<%= banner %>',
+				},
 				files: [
 					{
 						expand: true,
