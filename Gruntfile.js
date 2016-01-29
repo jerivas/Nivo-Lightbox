@@ -33,6 +33,19 @@ module.exports = function (grunt) {
 				],
 			},
 		},
+		uglify: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'src',
+						src: ['**/*.js'],
+						dest: 'dist',
+						ext: '.min.js',
+					},
+				],
+			},
+		},
 		watch: {
 			css: {
 				files: 'src/scss/**/*.scss',
@@ -48,6 +61,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Run all tasks and keep watching when invoking grunt without args
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
