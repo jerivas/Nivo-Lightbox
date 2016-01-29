@@ -51,9 +51,22 @@ module.exports = function (grunt) {
 					{
 						expand: true,
 						cwd: 'src',
-						src: ['**/*.js'],
+						src: ['**/*.js', '!**/*.min.js'],
 						dest: 'dist',
 						ext: '.min.js',
+					},
+				],
+			},
+		},
+		cssmin: {
+			dist: {
+				files: [
+					{
+						expand: true,
+						cwd: 'dist',
+						src: ['**/*.css', '!**/*.min.css'],
+						dest: 'dist',
+						ext: '.min.css',
 					},
 				],
 			},
@@ -74,7 +87,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 	// Run all tasks and keep watching when invoking grunt without args
 	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
+	// Minification tasks
+	grunt.registerTask('build', ['uglify', 'cssmin']);
 };
