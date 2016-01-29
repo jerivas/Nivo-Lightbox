@@ -1,5 +1,10 @@
 *** Nivo Lightbox Changelog ***
 
+ * [New] All styles moved to SCSS
+ * [New] Add package.json to make the plugin npm-installable
+ * [New] Use grunt to run development tasks
+ * [New] Add minimal theme (no external fonts or images needed)
+
 2014.05.15 - version 1.2.0
  * [Changed] iFrames and inline HTML now need a data-lightbox-type
  * [Changed] Nivo Lightbox now checks for content before overriding links
