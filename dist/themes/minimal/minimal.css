@@ -71,3 +71,14 @@
 	color: #fff;
 	text-shadow: 1px 1px 1px black;
 }
+
+.nivo-lightbox-theme-minimal .nivo-lightbox-image img {
+	background: #fff;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.nivo-lightbox-theme-minimal .nivo-lightbox-ajax, .nivo-lightbox-theme-minimal .nivo-lightbox-inline {
+	background: #fff;
+	padding: 40px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
