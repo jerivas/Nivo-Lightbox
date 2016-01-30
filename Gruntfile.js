@@ -97,8 +97,9 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-banner');
 
-	// Run all tasks and keep watching when invoking grunt without args
-	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
-	// Minification tasks
 	grunt.registerTask('build', ['uglify', 'cssmin', 'usebanner']);
+	grunt.registerTask('all', ['sass', 'autoprefixer', 'uglify', 'cssmin', 'usebanner'])
+
+	// By default run all development tasks and keep watching
+	grunt.registerTask('default', ['sass', 'autoprefixer', 'watch']);
 };
